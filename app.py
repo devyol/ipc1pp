@@ -36,7 +36,7 @@ def suma():
         mensaje  = 'Ocurrio un error:' + str(identifier)
 
     
-    fecha = datetime.datetime.now
+    fecha = datetime.datetime.now()
     tipoOperacion = 'suma'
     new_operacion = Historial(a,b,fecha,tipoOperacion,resultado)
     operaciones.append(new_operacion)
@@ -56,7 +56,7 @@ def resta():
         resultado = 0
         mensaje  = 'Ocurrio un error:' + str(identifier)
 
-    fecha = datetime.datetime.now
+    fecha = datetime.datetime.now()
     tipoOperacion = 'resta'
     new_operacion = Historial(a,b,fecha,tipoOperacion,resultado)
     operaciones.append(new_operacion)
@@ -76,7 +76,7 @@ def multiplicacion():
         resultado = 0
         mensaje  = 'Ocurrio un error:' + str(identifier)
 
-    fecha = datetime.datetime.now
+    fecha = datetime.datetime.now()
     tipoOperacion = 'multiplicacion'
     new_operacion = Historial(a,b,fecha,tipoOperacion,resultado)
     operaciones.append(new_operacion)
@@ -96,7 +96,7 @@ def division():
         resultado = -1
         mensaje  = 'Ocurrio un error:' + str(identifier)
 
-    fecha = datetime.datetime.now
+    fecha = datetime.datetime.now()
     tipoOperacion = 'division'
     new_operacion = Historial(a,b,fecha,tipoOperacion,resultado)
     operaciones.append(new_operacion)
@@ -115,7 +115,7 @@ def potencia():
         resultado = 0
         mensaje  = 'Ocurrio un error:' + str(identifier)
 
-    fecha = datetime.datetime.now
+    fecha = datetime.datetime.now()
     tipoOperacion = 'potencia'
     new_operacion = Historial(a,b,fecha,tipoOperacion,resultado)
     operaciones.append(new_operacion)
@@ -134,10 +134,10 @@ def raiz():
         resultado = 0
         mensaje  = 'Ocurrio un error:' + str(identifier)
 
-    fecha = datetime.datetime.now
+    fecha = datetime.datetime.now()
     tipoOperacion = 'raiz'
     new_operacion = Historial(a,b,fecha,tipoOperacion,resultado)
-
+    operaciones.append(new_operacion)
     return jsonify(resultado=resultado,mensaje=mensaje)
 
 @app.route('/historial',methods=['GET'])
